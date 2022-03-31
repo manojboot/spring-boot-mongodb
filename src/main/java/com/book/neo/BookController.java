@@ -1,6 +1,5 @@
 package com.book.neo;
 
-import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +21,8 @@ public class BookController {
 	}
 	
 	@GetMapping("/books")
-	public ResponseEntity<List<Books>> getAllBookDetails(){
-		List<Books> books = bookService.getAllBookDetails();
+	public ResponseEntity<BookResponse> getAllBookDetails(){
+		BookResponse books = bookService.getAllBookDetails();
 		return ResponseEntity.ok(books);
 	}
 	

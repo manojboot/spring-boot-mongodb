@@ -16,9 +16,14 @@ public class BookService {
 			this.bookRepository = bookRepository;
 		}
 		
-		public List<Books> getAllBookDetails(){
+		public BookResponse getAllBookDetails(){
 			
-			return bookRepository.findAll();
+			BookResponse response = new BookResponse();
+			List<Books> books = bookRepository.findAll();
+			response.setBooks(books);
+			response.setStatusCode(200);
+			response.setMessage("SUCCESS");
+			return response;
 		}
 		
 		public Books getBooksByBookName(String bookname){
