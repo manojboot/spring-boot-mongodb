@@ -20,4 +20,14 @@ public class BookService {
 			
 			return bookRepository.findAll();
 		}
+		
+		public Books getBooksByBookName(String bookname){
+			
+			return bookRepository.getBooksByBookname(bookname);
+		}
+		
+		public Books addBook(Books book){
+			
+			return bookRepository.save(book);
+		}
 }

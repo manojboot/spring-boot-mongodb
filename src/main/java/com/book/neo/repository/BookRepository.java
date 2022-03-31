@@ -7,5 +7,7 @@ import com.book.neo.Books;
 
 @Repository
 public interface BookRepository extends MongoRepository<Books, String>{
-
+	
+		public Books getBooksByBookname(String bookName);
+		
 }

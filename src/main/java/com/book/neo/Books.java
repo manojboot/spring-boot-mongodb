@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Document(collection = "books")
-public class Books {
+public class Books extends CommonResponse{
 
 	@Id
 	private String id;
