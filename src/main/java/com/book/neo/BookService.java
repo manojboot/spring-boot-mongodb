@@ -1,8 +1,10 @@
 package com.book.neo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import com.book.neo.repository.BookRepository;
 
@@ -27,8 +29,11 @@ public class BookService {
 		}
 		
 		public Books getBooksByBookName(String bookname){
-			
-			return bookRepository.getBooksByBookname(bookname);
+			Optional<Books> book = bookRepository.getBooksByBookname(bookname);
+			if(book.isEmpty()) {
+				throw new RecordNotFoundException("Book Doesn't Exist or Avilable " +bookname);
+			}
+			return book.get();
 		}
 		
 		public Books addBook(Books book){
