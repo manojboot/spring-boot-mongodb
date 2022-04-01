@@ -12,4 +12,8 @@ public class RecordNotFoundException extends RuntimeException {
 			super(message);
 			this.message = message;
 		}
+		
+		public RecordNotFoundException() {
+			
+		}
 }

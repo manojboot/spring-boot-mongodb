@@ -31,7 +31,7 @@ public class BookService {
 		public Books getBooksByBookName(String bookname){
 			Optional<Books> book = bookRepository.getBooksByBookname(bookname);
 			if(book.isEmpty()) {
-				throw new RecordNotFoundException("Book Doesn't Exist or Avilable " +bookname);
+				throw new RecordNotFoundException("Book Doesn't Exist or Avilable : " +bookname);
 			}
 			return book.get();
 		}
