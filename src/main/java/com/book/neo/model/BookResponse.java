@@ -1,4 +1,4 @@
-package com.book.neo;
+package com.book.neo.model;
 
 import java.util.List;
 
