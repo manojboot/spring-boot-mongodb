@@ -1,4 +1,4 @@
-package com.book.neo;
+package com.book.neo.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

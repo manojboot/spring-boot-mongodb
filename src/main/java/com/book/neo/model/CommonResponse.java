@@ -1,6 +1,4 @@
-package com.book.neo;
-
-import java.util.List;
+package com.book.neo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,9 +9,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ErrorResponse {
-
-		private String message;
-		private List<String> details;
+public class CommonResponse {
+	
+	private int statusCode;
+	private String message;
 }
-
